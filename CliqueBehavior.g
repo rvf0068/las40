@@ -1,4 +1,4 @@
-RequirePackage("yags");
+LoadPackage("yags");
 SetInfoLevel(YAGSInfo.InfoClass,1);
 Read("retraction.g");
 Read("cutpoints.g");
