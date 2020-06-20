@@ -1,4 +1,5 @@
 maxc:=500;
+smallretmax:=21;
 
 FalseDominatedVertices:=function(g) 
   local L,x,y;
@@ -122,7 +123,7 @@ end;
 SmallRetraction:=function(g,r)#general retractions only for small graphs.
     local L1,L2,g1,V,CHK_SPEC,ret,M,i;
     L1:=[];M:=[];
-    if Order(g)-Order(r)>10 then return fail; fi; 
+    if Order(g)-Order(r)>=smallretmax then return fail; fi; 
       CHK_SPEC:=function(g1,g2,morph) 
         local len;
         len:=Length(morph);
@@ -148,6 +149,7 @@ SmallRetraction:=function(g,r)#general retractions only for small graphs.
     od;
     return fail;
 end;
+
 
 ######################################
 #No parecen ser muy útiles estas más que para gráficas aleatorias
