@@ -8,7 +8,7 @@ RUN jupyter-nbextension install rise --user --py
 
 RUN jupyter-nbextension enable rise --user --py
 
-RUN git clone -b rafael https://github.com/yags/yags.git inst/gap-4.11.0/pkg/yags
+RUN git clone -b rafael https://github.com/yags/yags.git /home/gap/inst/gap-4.11.1/pkg/yags
 
 USER gap
 
